@@ -31,6 +31,8 @@ const foodListEl = document.getElementById('foodList');
 const newFoodInput = document.getElementById('newFoodInput');
 const addFoodBtn = document.getElementById('addFoodBtn');
 
+const resetBtn = document.getElementById('resetBtn');
+
 let isSpinning = false;
 
 // Event Listeners
@@ -44,8 +46,19 @@ toggleMenuBtn.addEventListener('click', () => {
     if (!menuSection.classList.contains('hidden')) {
         renderFoodList();
         toggleMenuBtn.textContent = "收起菜单";
+        resetBtn.style.display = "inline-block"; // Show reset button
     } else {
         toggleMenuBtn.textContent = "自定义菜单";
+        resetBtn.style.display = "none"; // Hide reset button
+    }
+});
+
+resetBtn.addEventListener('click', () => {
+    if (confirm("确定要恢复默认菜单吗？这将清空你添加的所有自定义美食。")) {
+        foods = [...defaultFoods];
+        saveFoods();
+        renderFoodList();
+        alert("已恢复默认菜单！");
     }
 });
 
