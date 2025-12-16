@@ -1,1 +1,45 @@
-<h1>Hello world </h1>
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今天吃什么？</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>今天吃什么？</h1>
+            <p>纠结症患者的福音</p>
+        </header>
+
+        <main>
+            <div class="food-display" id="foodDisplay">
+                <span class="placeholder">❓</span>
+            </div>
+
+            <button id="spinBtn" class="spin-btn">帮我选</button>
+
+            <div class="controls">
+                <button id="toggleMenuBtn" class="secondary-btn">自定义菜单</button>
+            </div>
+
+            <div id="menuSection" class="menu-section hidden">
+                <div class="input-group">
+                    <input type="text" id="newFoodInput" placeholder="输入想吃的美食...">
+                    <button id="addFoodBtn" class="add-btn">添加</button>
+                </div>
+                <ul id="foodList" class="food-list">
+                    <!-- List items will be injected here -->
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
