@@ -104,6 +104,9 @@ header p {
     margin-top: 1rem;
     border-top: 1px solid #eee;
     padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .secondary-btn {
@@ -119,6 +122,16 @@ header p {
 
 .secondary-btn:hover {
     background: var(--primary-color);
+    color: white;
+}
+
+.danger-btn {
+    border-color: #ff4757;
+    color: #ff4757;
+}
+
+.danger-btn:hover {
+    background: #ff4757;
     color: white;
 }
 
