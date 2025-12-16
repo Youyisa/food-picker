@@ -15,7 +15,7 @@
 ## 🚀 如何使用
 
 ### 方式一：直接访问（推荐）
-访问在线地址：[你的GitHub Pages链接]
+访问在线地址https://youyisa.github.io/food-picker
 
 ### 方式二：本地运行
 1. 下载本项目代码。
